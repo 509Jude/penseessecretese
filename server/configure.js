@@ -13,7 +13,9 @@ const path = require('path'),
         flash = require('connect-flash'),
         formidable = require('formidable'),
         passport = require('passport');
-        url = 'mongodb://localhost/ps';
+        url = 'mongodb://Jude:Espagne1492@ds233148-a0.mlab.com:33148,ds233148-a1.mlab.com:33148/penseessecretes?replicaSet=rs-ds233148';
+
+        //'mongodb://localhost/ps'
 
 module.exports = app =>{
     app.use(morgan('dev'));
