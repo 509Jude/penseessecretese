@@ -1,0 +1,43 @@
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">{{approb.titre}} </h1><br>
+                 <p class="text-center">{{user.nom}} {{user.prenom}} | {{approb.categorie}} </p>
+                <div style="background-color: #ddd; padding:20px;">{{{approb.contenu}}}</div>
+                <br>
+                <a href="/admin/modifier/approb" class="btn btn-success pull-left">Modifier</a>
+                <a href="/admin/publier/{{approb._id}}" class="btn btn-success pull-right">Publier</a>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Laisser un commentaire</h3>
+                <form method="post" action="/admin/approb/add-comment/{{approb._id}}">
+                    <div class="form-group">
+                        <textarea class="form-control input-lg" name="comment"></textarea>
+                        <input style="margin-top: 30px;" class="btn btn-primary pull-right" type="submit" value="Commenter" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Les commentaires</h3>
+
+                {{#each comments }}
+
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">{{this.nom}} {{this.prenom}}  -  Le  {{dateFormat date "d/M/YYYY, h:mm:ss a"}}</h4>
+                            {{{this.contenu}}}
+                        </div>
+                    </div>
+
+                {{/each}}
+
+
+        
+            </div>
+        </div>
+    </div>

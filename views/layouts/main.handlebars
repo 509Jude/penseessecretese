@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
+    {{#if client}}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    {{/if}}
+
+      {{#if client2}}
+       <meta property="og:url"           content="https://www.thebalance.com/the-11-best-free-wallpaper-sites-1357280" />
+      <meta property="og:type"          content="website" />
+      <meta property="og:title"         content="Your Website Title" />
+      <meta property="og:description"   content="Your description" />
+      <meta property="og:image"         content="https://fthmb.tqn.com/P83HGAUyXFRhTkF8r_suraHukAs=/768x0/filters:no_upscale()/vladstudio-library-wallpaper-5919cd763df78cf5fa3d7e27.jpg" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   
+      {{/if}}
+
+     {{#if tinymce}} 
+     <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+      {{/if}}
+    <!---->
+    <style>
+
+           
+
+            #upload-input {
+            display: none;
+            }
+
+             #g-upload-input{
+            display: none;
+            }
+
+</style>
+
+<style>
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+            header{
+  height:400px;
+  background:url(/img/photography_background.jpg) no-repeat center;
+  background-size:cover;
+  
+}
+
+.navbar-nav .nav li{
+  height:50px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color:#fff;
+  background-color:rgba(0,0,0,0.6);
+  font-weight:bold;
+
+}
+
+.navbar-brand span.text-title{
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+@media (max-width:767px) {
+  .navbar-brand span.text-title{
+    display:none;
+  }
+}
+
+.navbar-brand .glyphicon{
+  display:inline-block;
+  font-size:36px;
+  color:#fff;
+  vertical-align:middle;
+  margin-right:20px;
+  position:relative;
+  top:-2px;
+}
+
+.categories{
+  text-align:center !important;
+  margin-bottom:20px;
+  border-bottom:1px solid #e4e4e4;
+  padding:10px;
+}
+
+.categories li{
+  display:inline-block !important;
+  float:none;
+}
+
+.post-body{
+  margin-top:30px;
+  font-size:16px;
+}
+
+@media (min-width:992px) {
+  .post-title{
+    text-align:right;
+    padding-right:30px;
+  }
+}
+
+.post-title .author{
+  text-transform:uppercase;
+}
+
+.post-body figure{
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.post-title .author span{
+  margin-left:5px;
+}
+
+.post-title h1{
+  font-weight:bold;
+  margin-top:30px;
+}
+
+@media (max-width:767px) {
+  .post-title h1{
+    margin-top:20px;
+    font-size:32px;
+    margin-bottom:10px;
+  }
+}
+
+footer{
+  padding:20px;
+  text-align:center;
+  background-color:#333;
+  color:#fff;
+}
+
+footer h5{
+  color:inherit;
+}
+
+div.container.post{
+  margin-bottom:50px;
+}
+
+button.btn.btn-default.pull-right{
+  margin-top:30px;
+}
+
+div.row.post{
+  padding:15px;
+  margin-bottom:60px;
+  margin-top:60px;
+}
+
+footer{
+  background-color:#292c2f;
+  box-shadow:0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing:border-box;
+  width:100%;
+  text-align:left;
+  font:bold 16px sans-serif;
+  padding:55px 50px;
+  margin-top:80px;
+  bottom:0;
+  color:#fff;
+}
+
+.footer-navigation h3{
+  margin:0;
+  font:normal 36px Cookie, cursive;
+  margin-bottom:20px;
+  color:#fff;
+}
+
+.footer-navigation h3 a{
+  text-decoration:none;
+  color:#fff;
+}
+
+.footer-navigation h3 span{
+  color:#5383d3;
+}
+
+.footer-navigation p.links a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.footer-navigation p.company-name{
+  color:#8f9296;
+  font-size:14px;
+  font-weight:normal;
+  margin-top:20px;
+}
+
+@media (max-width:767px) {
+  .footer-contacts{
+    margin:30px 0;
+  }
+}
+
+.footer-contacts p{
+  display:inline-block;
+  color:#ffffff;
+  vertical-align:middle;
+}
+
+.footer-contacts p a{
+  color:#5383d3;
+  text-decoration:none;
+}
+
+.fa.footer-contacts-icon{
+  background-color:#33383b;
+  color:#fff;
+  font-size:18px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  text-align:center;
+  line-height:38px;
+  margin:10px 15px 10px 0;
+}
+
+span.new-line-span{
+  display:block;
+  font-weight:normal;
+  display:block;
+  font-weight:normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-about h4{
+  display:block;
+  color:#fff;
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.footer-about p{
+  line-height:20px;
+  color:#92999f;
+  font-size:13px;
+  font-weight:normal;
+  margin:0;
+}
+
+div.social-links{
+  margin-top:20px;
+  color:#fff;
+}
+
+.social-links a{
+  display:inline-block;
+  width:35px;
+  height:35px;
+  cursor:pointer;
+  background-color:#33383b;
+  border-radius:2px;
+  font-size:20px;
+  color:#ffffff;
+  text-align:center;
+  line-height:35px;
+  margin-right:5px;
+  margin-bottom:5px;
+}
+
+.navbar-nav{
+  margin-top:14px;
+}
+
+.navbar-nav > li > a{
+  padding-top:8px;
+  padding-bottom:8px;
+  line-height:32px;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color:#333;
+  font-weight:bold;
+  background-color:rgba(255,255,255,0.4);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+  color:#fff;
+  background-color:rgba(0,0,0,0.6);
+  font-weight:bold;
+}
+
+.navbar-toggle{
+  background-color:#fff !important;
+  box-shadow:1px 1px 1px rgba(0,0,0,0.4);
+  margin-top:20px;
+}
+
+nav.navbar.navbar-default{
+  background:none;
+  box-shadow:none;
+}
+
+.navbar-brand{
+  height:75px;
+  font-size:18px;
+  color:#fff !important;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.4);
+}
+
+@media (min-width:768px) {
+  .navbar-nav li{
+    margin-left:10px;
+  }
+}
+
+.navbar-default{
+   border-color: #00000000;
+}
+
+ .navbar-toggle{
+                background-color: #a99797 !important;
+            }
+
+
+
+    </style>
+
+    {{#if client2}}
+      <style>
+        .navbar-inverse{
+          background-color: #627c98;
+        }
+      </style>
+    {{/if}}
+    </head>
+    <body>
+
+      {{#if client2}}
+
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-link" href="#"><img src="/img/logo.jpg" width="100px"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="#">Accueil </a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Blog </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">First Item</a></li>
+                            <li><a href="#">Second Item</a></li>
+                            <li><a href="#">Third Item</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation"><a href="#">A propos</a></li>
+                    <li role="presentation"><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      {{{body}}}
+
+        
+   
+    <footer>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 footer-navigation">
+                <h3><a href="#">Pensées secrètes </a></h3>
+                <p class="links"><a href="#">Acceuil </a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">A propos</a><strong> · </strong><a href="#">Nous contacter</a><strong> </strong></p>
+                <p class="company-name">© 2018 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-contacts">
+                <div><span class="fa fa-phone footer-contacts-icon"></span>
+                    <p class="footer-center-info email text-left"> +1 555 123456</p>
+                </div>
+                <div><span class="fa fa-envelope footer-contacts-icon"></span>
+                    <p> <a href="#" target="_blank">support@company.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 footer-about">
+                <h4><strong>Crédo</strong> </h4>
+                <p>Peindre, questionner et transmettre. </p>
+                <div class="social-links social-icons"><a href="#"><span class="fa fa-facebook"></span></a></div>
+            </div>
+        </div>
+    </footer>
+
+         <script type="text/javascript" src="/assets/bootstrap/css/jquery.min.js"></script>       
+         <script type="text/javascript" src="/assets/bootstrap/css/bootstrap.min.js"></script>
+      {{/if}}
+
+
+        {{#if client}}
+
+
+             <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar-link" href="#"><img src="/img/logo.jpg" width="100px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li role="presentation"><a href="#">Accueil </a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Rubriques </a>
+                            <ul class="dropdown-menu" role="menu">
+                                {{#each rubriques}}
+                                    <li><a href="#">{{this.titre}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                        <li role="presentation"><a href="#">A propos</a></li>
+                        <li role="presentation"><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        {{{body}}}
+    
+    <footer>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 footer-navigation">
+                <h3><a href="#">Pensées secrètes </a></h3>
+                <p class="links"><a href="#">Acceuil </a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">A propos</a><strong> · </strong><a href="#">Nous contacter</a><strong> </strong></p>
+                <p class="company-name">© 2018 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-contacts">
+                <div><span class="fa fa-phone footer-contacts-icon"></span>
+                    <p class="footer-center-info email text-left"> +1 555 123456</p>
+                </div>
+                <div><span class="fa fa-envelope footer-contacts-icon"></span>
+                    <p> <a href="#" target="_blank">support@company.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 footer-about">
+                <h4><strong>Crédo</strong> </h4>
+                <p>Peindre, questionner et transmettre. </p>
+                <div class="social-links social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/assets/bootstrap/css/jquery.min.js"></script>       
+    <script type="text/javascript" src="/assets/bootstrap/css/bootstrap.min.js"></script>
+        {{/if}}        
+      
+
+
+        {{#if padmin}}
+
+                  <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand navbar-link" href="/">Page Acceuil</a></div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+               {{#if showUsernameNav}}  <a href="/admin/deconnexion" class="btn btn-danger btn-sm navbar-btn navbar-right" >Deconnexion <span class="glyphicon glyphicon-off"></span></a> {{/if}}
+                {{#if showAdmLink}}  <a href="/admin"  style="margin-right:5px;"class="btn btn-danger btn-sm navbar-btn navbar-right" >Retourner a la page d'administration </a> {{/if}}
+                <ul class="nav navbar-nav"></ul>
+                {{#if showUsernameNav}} <p class="navbar-text navbar-right">{{prenom}}&nbsp;&nbsp;&nbsp;</p> {{/if}}
+            </div>
+        </div>
+    </nav>
+      {{{body}}}
+        <script type="text/javascript" src="/assets/bootstrap/css/jquery.min.js"></script>       
+        <script type="text/javascript" src="/assets/bootstrap/css/bootstrap.min.js"></script>
+
+        {{/if}}
+
+
+
+    </body>
+</html>
+
+
+{{#if padmin}}
+{{> modifierProfil this}}
+{{/if}}

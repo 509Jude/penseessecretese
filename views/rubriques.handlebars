@@ -1,0 +1,37 @@
+<div class="container">
+    <center><h1>Rubriques</h1></center>
+<hr>
+
+<h2>Ajouter une rubrique</h2>
+<br>
+<form method="POST" action="/admin/ajouter/rubrique" class="form-inline">
+  <div class="form-group">
+    <input type="text" name="rubrique" class="form-control" id="rubrique" >
+  </div>
+  
+  <button type="submit" class="btn btn-primary"> Ajouter</button>
+</form>
+
+<br>
+<br>
+
+<h2>Supprimer une rubrique</h2>
+<br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td><h3>Rubrique</h3></td>
+            <td><h3>Option</h3></td>
+        </tr>
+    </thead>
+    <tbody>
+     {{#each rubriques}}
+        <tr><td>{{this.titre}}</td> <td><a class="btn-sm btn-danger" href="/admin/supprimer/rubrique/{{this._id}}">Supprimer</a></td> </tr>
+    {{/each}}
+
+    </tbody>
+</table>
+
+   
+</div>

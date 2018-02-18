@@ -1,0 +1,78 @@
+  <div class="row container">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> </h3></div>
+               <center> <div class="panel-body"><img width="200px" class="img-responsive" src="/img/profile/{{user.photo}}"></div></center>
+            </div>
+            <button data-toggle="modal" data-target="#modalChangerPass" class="btn btn-danger btn-sm pull-left" type="button">Changer mot de passe <span class="glyphicon glyphicon-pencil"></span></button>
+             <button data-toggle="modal" data-target="#modalChangerPhoto" class="btn btn-danger btn-sm pull-right" type="button">Modifier photo profil <span class="glyphicon glyphicon-pencil"></span></button>
+             <br><br>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Nom</h3></div>
+                <div class="panel-body"><span>{{user.nom}} </span>
+                    <button data-toggle="modal" data-target="#modalChangerNom" class="btn btn-danger btn-sm pull-right" type="button">modifier <span class="glyphicon glyphicon-pencil"></span></button>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Prenom</h3></div>
+                <div class="panel-body"><span>{{user.prenom}} </span>
+                    <button data-toggle="modal" data-target="#modalChangerPrenom" class="btn btn-danger btn-sm pull-right" type="button">modifier <span class="glyphicon glyphicon-pencil"></span></button>
+                </div>
+            </div>
+        
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">mail </h3></div>
+                <div class="panel-body"><span>{{user.email}}</span>
+                    <button data-toggle="modal" data-target="#modalChangerMail" class="btn btn-danger btn-sm pull-right" type="button">modifier <span class="glyphicon glyphicon-pencil"></span></button>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Biographie </h3></div>
+                <div class="panel-body"><span>{{user.bio}}</span>
+                    <button data-toggle="modal" data-target="#modalChangerBio" class="btn btn-danger btn-sm pull-right" type="button">modifier <span class="glyphicon glyphicon-pencil"></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h2 class="text-center text-primary">Administration </h2>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Rubriques options</h3></div>
+                <div class="panel-body"><span> </span>
+                    <a href="/admin/afficher/rubriques" class="btn btn-success pull-right" type="button">Ajouter ou supprimer une rubrique <span class="glyphicon glyphicon-plus"></span></a>
+                                   </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Boites approbation</h3></div>
+                <div class="panel-body"><span> </span>
+                    <a href="/admin/voir/ma/boite" class="btn btn-primary" type="button">Son article</a>
+                    <a href="/admin/voir/boite" class="btn btn-success pull-right" type="button">Commenter un article <span class="glyphicon glyphicon-ok-sign"></span> </a>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Articles options</h3></div>
+                <div class="panel-body"><span> </span>
+                    <a href="/admin/ecrire/article" class="btn btn-success" type="button">Ajouter <span class="glyphicon glyphicon-plus"></span></a>
+                     <a href="/admin/ses-articles/1" class="btn btn-success pull-right" type="button">Modifier un article publié </a>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ma gallerie</h3></div>
+                <div class="panel-body"><span> </span>
+                     <a href="/admin/gallerie/1" class="btn btn-success pull-right" type="button">Voir</a>
+                </div>
+            </div>
+        </div>
+    </div>

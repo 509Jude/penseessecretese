@@ -1,0 +1,53 @@
+        
+ <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Mes articles publiés </h1>
+            </div>
+        </div>
+
+        <br> <br>
+
+        {{#each approbs}}
+        <br>
+             <div class="row post">
+            <div class="col-md-4"><img width="200px" class="img-responsive" src="{{this.image}}">
+                <h3 class="text-left">{{this.titre}}</h3>
+                <p>{{this.nomAuteur}} {{this.prenomAuteur}} - {{dateFormat date "d/M/YYYY, h:mm:ss a"}}</p>
+                <p>12 vues</p>
+            </div>
+            <div class="col-md-7" style="word-wrap: break-word;">
+                <p>{{{trimString this.contenu}}}</p>
+                <a href="/admin/modifier/article/{{this.id}}" class="btn btn-primary pull-right" type="button">Modifier </a>
+            </div>
+        </div>
+        <br><hr>
+        {{/each}}
+<br>
+        
+{{#if showPagination}}
+<div class="row">
+    <div class="col-lg-12">
+        <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li>
+            <a href="/admin/ses-articles/{{previous}}" aria-label="Précédent">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+            </li>
+            {{#each pages}}
+            <li><a href="/admin/ses-articles/{{this}}">{{this}}</a></li>
+            {{/each}}
+            <li>
+            <a href="/admin/ses-articles/{{next}}" aria-label="Suivant">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+            </li>
+        </ul>
+        </nav>
+    </div>
+</div>
+{{/if}}
+
+       
+ </div>

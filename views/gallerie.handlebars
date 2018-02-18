@@ -1,0 +1,90 @@
+<div class="container">
+    <center><h1>Gallerie</h1></center>
+<hr>
+
+<h2>Ajouter une Image</h2>
+<br>
+  
+ <button data-toggle="modal" data-target="#modalGallerie" class="btn btn-primary" type="button">Ajouter</button>
+
+
+<br>
+<br>
+<hr>
+<h2>Mes images</h2>
+<br>
+
+
+{{#each images}}
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+         <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> </h3></div>
+               <center> <div class="panel-body"><img width="200px" class="img-responsive" src="/img/gallerie/{{this.nom}}"></div></center>
+               <br>
+               <center><p>Lien</p></center>
+               <input class="form-control" readonly type="text" value="/img/gallerie/{{this.nom}}">
+            </div>
+    </div>
+</div>
+
+{{/each}}
+
+
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="/admin/gallerie/{{previous}}" aria-label="Précédent">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {{#each pages}}
+    <li><a href="/admin/gallerie/{{this}}">{{this}}</a></li>
+    {{/each}}
+    <li>
+      <a href="/admin/gallerie/{{next}}" aria-label="Suivant">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+   
+</div>
+
+
+
+
+
+    <div id="modalGallerie" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ajouter une image </h4>
+            </div>
+            <div class="modal-body">
+                         <div class="panel panel-default">
+                            <div class="panel-body">
+                                <span class="glyphicon glyphicon-cloud-upload"></span>
+                                <h2>File Uploader</h2>
+                                <h4>coligo.io</h4>
+                                <div class="progress-g">
+                                <div class="progress-bar-g" role="progressbar"></div>
+                                </div>
+                                <button class="btn btn-lg upload-btn-g" type="button">Upload File</button>
+                                <input style="display: none;" id="upload-input-g" type="file" name="uploads[]" multiple="multiple">
+                            </div>
+                        </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,407 @@
+
+<!--                   NOM   -->
+<div id="modalChangerNom" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Changer le nom</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Nom </label>
+                    <input class="form-control nom" name="nom" placeholder={{user.nom}} type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success modifierNom" data-dismiss="modal">Modifier</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin                  NOM   -->
+
+
+<!--                   PRENOM   -->
+<div id="modalChangerPrenom" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Changer le prenom</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Prenom </label>
+                    <input class="form-control prenom" name="prenom" placeholder={{user.prenom}} type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success modifierPrenom" data-dismiss="modal">Modifier</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin                  PRENOM   -->
+
+
+<!--                   MAIL   -->
+<div id="modalChangerMail" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Changer le mail</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Mail </label>
+                    <input class="form-control mail" name="mail" placeholder={{user.email}} type="text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success modifierMail" data-dismiss="modal">Modifier</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin                  MAIL   -->
+
+
+<!--                   Password   -->
+<div id="modalChangerPass" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Changer le mot de passe</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Ancien Mot de passe </label>
+                    <input class="form-control oldpass" name="oldpass" type="password">
+                    <label class="control-label">Nouveau Mot de passe </label>
+                    <input class="form-control newpass" name="newpass"  type="password">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success modifierPass" data-dismiss="modal">Modifier</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin                  Password   -->
+
+
+<!--                   Bio   -->
+<div id="modalChangerBio" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Changer le Bio</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Bio </label>
+                   <textarea class="form-control bio" placeholder="{{user.bio}}" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success modifierBio" data-dismiss="modal">Modifier</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin                  Bio   -->
+
+
+<!--  profil photo               -->
+{{#if p}}
+    <div id="modalChangerPhoto" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Changer la photo de profil </h4>
+            </div>
+            <div class="modal-body">
+                   <div class="panel panel-default">
+                    <div class="panel-body">
+                        <span class="glyphicon glyphicon-cloud-upload"></span>
+                        <h2>File Uploader</h2>
+                        <h4>coligo.io</h4>
+                        <div class="progress">
+                        <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                        <button class="btn btn-lg upload-btn" type="button">Upload File</button>
+                         <input id="upload-input" type="file" name="uploads[]" multiple="multiple">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<!-- Fin  profil photo           -->
+
+
+
+   
+
+
+<script>
+
+//          Nom    
+$('.modifierNom').on('click', function (){
+    var nom = $('.nom').val();
+     $.ajax({
+    url: '/admin/changer/nom/'+nom,
+    success: function (data) {
+        window.location.replace("/admin");     
+    }
+});
+});
+// Fin     Nom
+
+//          Prenom    
+$('.modifierPrenom').on('click', function (){
+    var prenom = $('.prenom').val();
+     $.ajax({
+    url: '/admin/changer/prenom/'+prenom,
+    success: function (data) {
+        window.location.replace("/admin");     
+    }
+});
+});
+// Fin     Prenom
+
+//          Mail   
+function ValidateEmail(mail)   
+ {  
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))  
+   {  
+     return (true)  
+   }  
+     
+     return (false)  
+ } 
+
+//          Prenom    
+$('.modifierMail').on('click', function (){
+   var mail = $('.mail').val();
+   if(ValidateEmail(mail)){
+         $.ajax({
+        url: '/admin/changer/mail/'+mail,
+        success: function (data) {
+            window.location.replace("/admin");     
+        }
+    });
+   }else{
+       alert("Email invalide")
+   }
+    
+});
+
+// Fin     Mail
+
+//          Password    
+$('.modifierPass').on('click', function (){
+    var pass = $('.pass').val();
+    
+    var old = $('.oldpass').val();
+     var newPass = $('.newpass').val();
+     if(newPass.length<5){
+          alert("Mot de passe minimum 5 caracteres!")
+          $('.oldpass').val("");
+          $('.newpass').val("");
+          return
+     }else{
+           $.ajax({
+            url: '/admin/changer/pass/'+old+'/'+newPass,
+            success: function (data) {
+               if(!data){
+                   alert("Mot de passe incorrect")
+               }
+               if(data=="success"){
+                    window.location.replace("/admin/deconnexion"); 
+               }
+            }
+         });
+     }
+       
+   
+});
+
+// Fin     Password
+
+
+//          bio    
+$('.modifierBio').on('click', function (){
+    var bio = $('.bio').val();
+
+           $.ajax({
+            url: '/admin/changer/bio/'+bio,
+            success: function (data) {
+             window.location.replace("/admin"); 
+            }
+         });
+     });
+
+// Fin     bio
+
+
+// Foto profil
+$('.upload-btn').on('click', function (){
+    $('#upload-input').click();
+    $('.progress-bar').text('0%');
+    $('.progress-bar').width('0%');
+});
+
+$('#upload-input').on('change', function(){
+
+  var files = $(this).get(0).files;
+
+  if (files.length > 0){
+    // create a FormData object which will be sent as the data payload in the
+    // AJAX request
+    var formData = new FormData();
+
+    // loop through all the selected files and add them to the formData object
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+
+      // add the files to formData object for the data payload
+      formData.append('uploads[]', file, file.name);
+    }
+
+    $.ajax({
+      url: '/upload/admin/profil',
+      type: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(data){
+          console.log('upload successful!\n' + data);
+          window.location.replace("/admin"); 
+      },
+      xhr: function() {
+        // create an XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // listen to the 'progress' event
+        xhr.upload.addEventListener('progress', function(evt) {
+
+          if (evt.lengthComputable) {
+            // calculate the percentage of upload completed
+            var percentComplete = evt.loaded / evt.total;
+            percentComplete = parseInt(percentComplete * 100);
+
+            // update the Bootstrap progress bar with the new percentage
+            $('.progress-bar').text(percentComplete + '%');
+            $('.progress-bar').width(percentComplete + '%');
+
+            // once the upload reaches 100%, set the progress bar text to done
+            if (percentComplete === 100) {
+              $('.progress-bar').html('Done');
+            }
+
+          }
+
+        }, false);
+
+         
+
+        return xhr;
+      }
+    });
+
+  }
+});
+
+// fin photo profil
+
+
+$('.upload-btn-g').on('click', function (){
+    $('#upload-input-g').click();
+    $('.progress-bar-g').text('0%');
+    $('.progress-bar-g').width('0%');
+});
+
+$('#upload-input-g').on('change', function(){
+
+  var files = $(this).get(0).files;
+
+  if (files.length > 0){
+    // create a FormData object which will be sent as the data payload in the
+    // AJAX request
+    var formData = new FormData();
+
+    // loop through all the selected files and add them to the formData object
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+
+      // add the files to formData object for the data payload
+      formData.append('uploads[]', file, file.name);
+    }
+
+    $.ajax({
+      url: '/admin/gallerie',
+      type: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(data){
+          console.log('upload successful!\n' + data);
+           window.location.replace("/admin/gallerie/1"); 
+      },
+      xhr: function() {
+        // create an XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // listen to the 'progress' event
+        xhr.upload.addEventListener('progress', function(evt) {
+
+          if (evt.lengthComputable) {
+            // calculate the percentage of upload completed
+            var percentComplete = evt.loaded / evt.total;
+            percentComplete = parseInt(percentComplete * 100);
+
+            // update the Bootstrap progress bar with the new percentage
+            $('.progress-bar-g').text(percentComplete + '%');
+            $('.progress-bar-g').width(percentComplete + '%');
+
+            // once the upload reaches 100%, set the progress bar text to done
+            if (percentComplete === 100) {
+              $('.progress-bar-g').html('Done');
+            }
+
+          }
+
+        }, false);
+
+        return xhr;
+      }
+    });
+
+  }
+});
+
+
+</script>
+

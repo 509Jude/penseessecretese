@@ -1,0 +1,18 @@
+<div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+            <h1 class="text-center text-primary">Connexion </h1>
+            <hr>
+            <p>{{message}}</p>
+            <hr>
+            <form method="post" action="/admin/connexion">
+                <div class="form-group">
+                    <label class="control-label">Mail </label>
+                    <input class="form-control" name="email" type="email">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Mot de passe</label>
+                    <input class="form-control" name="password" type="password">
+                </div>
+                <button class="btn btn-success btn-block" type="submit">Connexion </button><a class="btn btn-primary btn-block" role="button" href="/admin/inscription">Inscription </a></form>
+        </div>
+    </div>

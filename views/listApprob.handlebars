@@ -1,0 +1,28 @@
+        
+ <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Articles à approuvé</h1>
+            </div>
+        </div>
+
+        <br> <br>
+
+        {{#each approbs}}
+        <br>
+             <div class="row post">
+            <div class="col-md-4"><img width="200px" class="img-responsive" src="{{this.image}}">
+                <h3 class="text-left">{{this.titre}}</h3>
+                <p>{{this.nomAuteur}} {{this.prenomAuteur}} - {{dateFormat date "d/M/YYYY, h:mm:ss a"}}</p>
+                <p>12 vues</p>
+            </div>
+            <div class="col-md-7" style="word-wrap: break-word;">
+                <p>{{{trimString this.contenu}}}</p>
+                <a href="/admin/approuver/article/{{this.id}}" class="btn btn-primary pull-right" type="button">Lire </a>
+            </div>
+        </div>
+        <br><hr>
+        {{/each}}
+
+       
+ </div>
